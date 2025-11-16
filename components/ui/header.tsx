@@ -70,7 +70,7 @@ export const Header = () => {
       </div>
 
       {/* menu mobile */}
-      <div className='relative z-40 w-full h-10 md:hidden '>
+      <div className='relative z-40 w-full h-9 md:hidden '>
         <div className='flex items-center justify-between w-full h-10 px-4 bg-gray-50 text-gray-800 drop-shadow-lg dark:bg-zinc-900 dark:text-white transition-all duration-700'>
           <div className='flex-1  relative overflow-hidden'>
             <Menu size={20} className='md:hidden' onClick={() => setOpenMenu(!openMenu)} />
@@ -112,7 +112,7 @@ export const Header = () => {
         </div>
 
         {/* links */}
-        <div className={`fixed -z-30 pt-8 top-10 left-0 w-full h-[calc(100vh-40px)] bg-zinc-50 dark:bg-zinc-800 transition-all duration-500 ${openMenu === true ? 'top-20' : '-translate-y-full'} overflow-hidden overflow-y-auto`}>
+        <div className={`fixed -z-30 pt-8 top-9 left-0 w-full h-[calc(100vh-41px)] bg-zinc-50 dark:bg-zinc-800 transition-all duration-500 ${openMenu === true ? 'top-0' : '-translate-y-full -mt-10'} overflow-hidden overflow-y-auto`}>
           <div className='px-4'>
             <h2 className='text-xl px-2 font-semibold mb-3 dark:text-zinc-100'>Discover</h2>
             <ul className='space-y-4 px-4 text-sm dark:text-zinc-100'>
