@@ -5,6 +5,7 @@ import { Header } from "@/components/ui/header";
 import { Sidebar } from "@/components/ui/sidebar";
 import { ThemeProvider } from "next-themes";
 import { Suspense } from "react";
+import { Loading } from "@/components/loading";
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -26,7 +27,7 @@ export default function RootLayout({
     <html lang="en" className={`${montserrat.variable} antialiased`} suppressHydrationWarning>
       <body cz-shortcut-listen="true" >
         <ThemeProvider attribute='class' enableSystem defaultTheme="system">
-          <Suspense fallback={<>Loading...</>}>
+          <Suspense fallback={<Loading/>}>
             <Header />
             <main className="w-full min-h-full grid grid-cols-1 md:grid-cols-[200px_1fr] md:pt-10 text-zinc-600 dark:text-zinc-300 transition-all duration-700">
               <Sidebar />
