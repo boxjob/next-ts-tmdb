@@ -112,7 +112,7 @@ export const Header = () => {
         </div>
 
         {/* links */}
-        <div className={`fixed -z-30 pt-8 top-10 left-0 w-full h-[calc(100vh-40px)] bg-zinc-50 dark:bg-zinc-800 transition-all duration-500 ${openMenu === true ? 'top-0' : '-translate-y-full'} overflow-hidden overflow-y-auto`}>
+        <div className={`fixed -z-30 pt-8 top-10 left-0 w-full h-[calc(100vh-40px)] bg-zinc-50 dark:bg-zinc-800 transition-all duration-500 ${openMenu === true ? 'top-20' : '-translate-y-full'} overflow-hidden overflow-y-auto`}>
           <div className='px-4'>
             <h2 className='text-xl px-2 font-semibold mb-3 dark:text-zinc-100'>Discover</h2>
             <ul className='space-y-4 px-4 text-sm dark:text-zinc-100'>
