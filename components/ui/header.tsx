@@ -1,7 +1,7 @@
 'use client'
 import { Menu, Search, SearchX } from 'lucide-react'
 import Link from 'next/link'
-import { FormEvent, useEffect, useState } from 'react'
+import { FormEvent, Suspense, useEffect, useState } from 'react'
 import { ThemeToggle } from './theme-toggle'
 import { IGenre } from '@/types'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
@@ -157,25 +157,26 @@ export const Header = () => {
             </ul>
           </div>
 
+          
           <div className='mb-8 px-4'>
             <h2 className='text-xl px-2 font-semibold mb-3 mt-6 dark:text-zinc-100'>Genre</h2>
             <ul className='space-y-4 px-4 text-sm dark:text-zinc-100'>
-              {menu.map((g: IGenre) =>
-                <li
-                  key={g.id}
-                  onClick={() => setOpenMenu(false)}
-                  className={`w-full py-1 px-2 ${ genreActive === g.name.toLowerCase()
-                    ? 'text-zinc-400 border-b dark:text-zinc-500'
-                    : ''}
-                `}>
-                  <Link href={`/genre/${g.id}?genre=${g.name.toLowerCase()}`}>
-                    {g.name}
-                  </Link>
-                </li>
-              )}
+                {menu.map((g: IGenre) =>
+                  <li
+                    key={g.id}
+                    onClick={() => setOpenMenu(false)}
+                    className={`w-full py-1 px-2 ${ genreActive === g.name.toLowerCase()
+                      ? 'text-zinc-400 border-b dark:text-zinc-500'
+                      : ''}
+                  `}>
+                    <Link href={`/genre/${g.id}?genre=${g.name.toLowerCase()}`}>
+                      {g.name}
+                    </Link>
+                  </li>
+                )}
             </ul>
           </div>
-
+          
         </div>
 
       </div>

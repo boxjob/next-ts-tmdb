@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import ReactPlayer from 'react-player'
-import { ArrowLeft, X } from "lucide-react"
+import { X } from "lucide-react"
 import { useRouter } from 'next/navigation'
 
 export const DetailContent = (props: IDetail) => {

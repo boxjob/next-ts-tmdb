@@ -69,6 +69,7 @@ export const Sidebar = () => {
       <div>
         <h2 className='text-xl font-semibold mb-3 mt-6'>Genre</h2>
         <ul className='space-y-4 ml-2 text-sm'>
+           
           {menu.map((g: IGenre) =>
             <li key={ g.id }>
               <Link 
@@ -79,6 +80,7 @@ export const Sidebar = () => {
               </Link>
             </li>
           )}
+          
         </ul>
       </div>
     </aside>
